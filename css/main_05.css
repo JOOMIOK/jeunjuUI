@@ -61,6 +61,7 @@ body{
 }
 
 .button.is-open-menu .ir{
+  background-color: yellow;
   background-image: url(./../images/navigation-button.gif );
   display: block;
   width: 26px;
