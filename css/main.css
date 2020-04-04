@@ -82,3 +82,33 @@ body{
 .app-navigation{
   display: none;
 }
+/* 음료컨텐츠 */
+.app-main{
+  background-color: yellow;
+  padding:0 20px;
+}
+.ediya-menu{
+  background-color: skyblue;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px ;
+}
+.ediya-menu__item{
+  background-color: pink;
+}
+
+@media screen and (min-width:769px) {
+  .ediya-menu{
+    max-width: 960px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:961px){
+  .ediya-menu{
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* grid-template-columns: repeat(4, 1fr) 과 동일 소스 */
+  }
+}
