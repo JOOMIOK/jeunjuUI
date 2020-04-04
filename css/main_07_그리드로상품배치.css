@@ -1,0 +1,114 @@
+/*웹폰트*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+/* 초기화 */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);/* 외부에 작업되어잇는 namal style 불러오기*/
+
+/* 기본스타일 */
+/* *, *::before, *::after{
+  box-sizing: border-box;
+} */
+body{
+  font-family: 'Spoqa Han Sans' , 'Sans-serif';
+  font-weight:400;
+}
+
+/* 공통스타일*/
+.reset-margin{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.reset-list{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.a11y-hidden{  /* 화면에 보이지 않고 읽기만   숨김컨텐츠 영역*/
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  clip-path:polygon(0 0, 0 0, 0 0) ;
+}
+/* 헤더 */
+.app-header{
+  background-color: rgba(255,255,255,0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;/*  right:0 주지않으면 가로사이즈가 100%  되지 않아 왼쪽 오른쪽을 0준다 */
+  backdrop-filter:blue(5px) ;    /* 배경아래가 흐릿하게 보이기 */ 
+}
+/* 브랜드 */
+.brand a{
+  display: block;
+  width: 215px;
+}
+.brand img{
+  padding: 25px;
+}
+/* 메인메뉴 열기버튼 */
+/* 버튼 디자인 */
+
+.app-header .button .ir,
+.app-header .button .close {
+  cursor: pointer;
+}
+
+.app-header .button.is-open-menu {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 20px;
+  background: #ffffff;
+  border: 0;
+  /* transition: all 0.3s ease; */
+}
+
+.button.is-open-menu .ir{
+  background-image: url(./../images/navigation-button.gif );
+  display: block;
+  width: 26px;
+  height: 22px;
+}
+/* 메인메뉴 */
+.app-navigation{
+  display: none;
+}
+/* 음료컨텐츠 */
+.app-main{
+  background-color: yellow;
+  padding:0 20px;
+}
+.ediya-menu{
+  background-color: skyblue;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px ;
+}
+.ediya-menu__item{
+  background-color: pink;
+}
+
+@media screen and (min-width:769px) {
+  .ediya-menu{
+    max-width: 960px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:961px){
+  .ediya-menu{
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* grid-template-columns: repeat(4, 1fr) 과 동일 소스 */
+  }
+}

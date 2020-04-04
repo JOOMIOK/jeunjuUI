@@ -89,12 +89,6 @@ body{
   height: 100vh;
   background-color: hsla(255, 57%, 10%, 0.9);
   color: #fff;
-  transition: all  0.4s cubic-bezier(0.66, -0.01, 0.3, 0.99);
-  transform: translateX(105vw);
-  backdrop-filter:blur(2px);
-}
-.app-navigation.is-active{
-  transform: translateX(0);
 }
 .app-navigation .button.is-close-menu{
   position: absolute;
@@ -107,7 +101,6 @@ body{
   font-size: 20px ;
   line-height: 0.5;
   border: 0 none;
- 
 }
 .app-navigation ul{
   padding-top: 60px;
@@ -137,7 +130,6 @@ body{
   grid-template-rows: auto;
 }
 .ediya-menu__item{
-  position: relative;
 }
 .ediya-menu__item a{
   display: block;
@@ -163,84 +155,8 @@ body{
 .ediya-menu__item figcaption{
   margin-bottom: 1em;
 }
-.ediya-menu__item--detail{
-  background-color: rgba(255,255,255,0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 1em;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 2em;
-  /* opacity: 0; */
-}
-.ediya-menu__item--detail.is-active{
-  opacity: 1;
-}
-.ediya-menu__item--name{
-  border-bottom: solid 2px #202023;
-  padding-bottom:  1em;
-  font-weight: 400;
-  font-size: 18px;
-  color:#202020;
 
-}
-.ediya-menu__item--detail p{
-  line-height: 1.6;
-} 
-.ediya-menu__item--name [lang="en"]{
- display: block;
- font-size: 14px;
- color:#737373;
-}
-.ediya-menu__item--multi-column{
-  position: absolute;
-  right: 1px;
-  left:1px;
-  bottom: 1px;
-  column-fill: auto;
-  column-rule: 1px solid #999;
-  padding: 1em 2em;
-  background: #f8f8f8;
-  column-gap : 1em;
-}
-.is-2{
-  column-count: 2;
-}
-.ediya-menu__item--multi-column dl{
-  margin: 0;
-}
-.ediya-menu__item--multi-column dt{
-  
-  margin-left: 0;
-  float: left;
-  margin-right: 10%;
-  width: 40%;
-}
-.ediya-menu__item--multi-column dd{
- 
-  margin-left: 0;
-  float: right;
-  width: 40%;
-}
-.ediya-menu__item--detail .button.is-close-panel {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  padding: 9px 15px;
-  font-size: 24px;
-  background: transparent;
-  transition: all 0.3s ease;
-  border: 0 none;
-}
-
-.ediya-menu__item--detail .button.is-close-panel:hover {
-  background: #f3f3f3;
-}
-
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
   .ediya-menu{
     max-width: 960px;
     grid-template-columns: 1fr 1fr;
